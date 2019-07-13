@@ -6,6 +6,7 @@
 package cl.trackthor.controller;
 
 import java.security.Principal;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -24,7 +25,14 @@ public class TestController {
     public Principal getLogin(Principal principal) {
         return principal;
     }
+    
+    @GetMapping("/")
+    public void index(HttpServletResponse response) {
+        response.setHeader("Location", "http://localhost:4200/");
+        response.setStatus(302);
+    }
 
+    /*
     @GetMapping("/")
     public String index(Authentication authentication) {
         OAuth2User user = getCurrentUser(authentication);
@@ -40,5 +48,5 @@ public class TestController {
     public OAuth2User getCurrentUser(Authentication auth) {
         return ((OAuth2AuthenticationToken) auth).getPrincipal();
     }
-
+     */
 }
