@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cl.trackthor</groupId>
-    <artifactId>Google-Backend</artifactId>
+    <artifactId>MultiOAuth2AuthenticationProcessingFilter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Google-Backend</name>
+    <name>MultiOAuth2AuthenticationProcessingFilter</name>
     <description>rest-web-services</description>
 
     <properties>
