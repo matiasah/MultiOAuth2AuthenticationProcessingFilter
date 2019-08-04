@@ -16,8 +16,6 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails;
 import org.springframework.security.oauth2.common.AuthenticationScheme;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationManager;
-import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter;
-import org.springframework.web.filter.CompositeFilter;
 
 /**
  *
@@ -43,8 +41,8 @@ public class OAuth2FilterConfig {
         
         // OAuth2ProtectedResourceDetails
         AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
-        resourceDetails.setClientId("76115053642-l3g6sm2lbt8m4q154nnr19vp4meirf1v.apps.googleusercontent.com");
-        resourceDetails.setClientSecret("OwyLiRQScUYBQ5wnVZ_Laz9l");
+        resourceDetails.setClientId("GOOGLE_CLIENT_ID");
+        resourceDetails.setClientSecret("GOOGLE_CLIENT_SECRET");
         resourceDetails.setAccessTokenUri("https://www.googleapis.com/oauth2/v4/token");
         resourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
         resourceDetails.setUserAuthorizationUri("https://accounts.google.com/o/oauth2/v2/auth");
@@ -73,8 +71,8 @@ public class OAuth2FilterConfig {
         
         // OAuth2ProtectedResourceDetails
         AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
-        resourceDetails.setClientId("360755857937906");
-        resourceDetails.setClientSecret("26756d4c686e7b3b716c06ea9de218d4");
+        resourceDetails.setClientId("FACEBOOK_CLIENT_ID");
+        resourceDetails.setClientSecret("FACEBOOK_CLIENT_SECRET");
         resourceDetails.setAccessTokenUri("https://graph.facebook.com/v2.8/oauth/access_token");
         resourceDetails.setAuthenticationScheme(AuthenticationScheme.query);
         resourceDetails.setUserAuthorizationUri("https://www.facebook.com/v2.8/dialog/oauth");
